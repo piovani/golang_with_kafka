@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  golang_with_kafka_api:
+    container_name: golang_with_kafka_api
+    build: ./docker/golang/
+    volumes: 
+      - ".:/go/src/"
+    ports:
+      - ${APP_PORT}:8000
